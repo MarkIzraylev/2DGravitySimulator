@@ -26,7 +26,7 @@ The program has several modes.
 2. Click in the place where you want to create a body.
 3. Click in the place where the vector of the initial velocity of the body will end.
 4. Press the mode button again to exit it and run the simulation.
-You can also run ready-made simulations by clicking on the "ready simulations" button and selecting from the list.
+You can also run ready-made simulations by clicking on the "built-in simulations" ("готовые симуляции") button and selecting from the list.
 
 ### Moving across, zooming in and out
 - To move around the simulation, use the arrows on the keyboard.
@@ -39,16 +39,15 @@ To change space objects, click "selection mode" ("режим выбора") and 
 To delete all objects in the simulation, click "delete all objects" ("удалить все объекты").
 
 ### Video recording
-To start videotaping the simulation, click "start video recording" ("начать запись видео"). Press the button again to finish recording. Watch the video. Then click three dots button on the video player and select "download the video".
+To start videotaping the simulation, click "start video recording" ("начать запись видео"). Press the button again to finish recording. Watch the video. Then click three dots button on the video player and select "download" ("скачать").
 
 ## How it works
-
 - There are a number of bodies on the playing field that have mass, velocity vectors and coordinates. The task of the simulator is to find the coordinates of bodies and their velocities at subsequent points in time.
 
 - These calculations are made on the basis of Newton's law of universal gravitation.
     1. Each new frame, the program finds the force of attraction (F) of each body to all other bodies on the playing field.
     2. Since F = ma (where F is force, m is mass, a is acceleration), then a = F/m. That is, to find the acceleration of a body at a particular time, you need to divide the force (in this case, the force of attraction) acting on the body by its mass.
-    3. It is known that acceleration shows the rapidity of speed change. Therefore, the velocity vectors of bodies change to the acceleration vector at a specific time. Hence, the change in the velocity vector = the vector of gravity / body mass.
+    3. It is known that acceleration shows the rate of speed change. Therefore, the velocity vectors of bodies change to the acceleration vector at a specific time. Hence, the change in the velocity vector = the vector of gravity / body mass.
 
 - That is,
   
@@ -57,4 +56,3 @@ To start videotaping the simulation, click "start video recording" ("начат�
 ## Reviews
 Kalinin Dmitry Alexandrovich, a teacher of physics and astronomy at the Yaroslavl Urban Planning College, commented on the project as follows:
 > "This simulator can be used to determine the flight paths of rockets, spacecraft, asteroids, comets, but without taking into account the passage near the surface of planets with an atmosphere. It is also possible to follow the trajectory of the movement of bodies relative to the Earth. It cannot be used for the movement of a system of double or multiple stars located close to each other (because there is an exchange of matter)."
-##
