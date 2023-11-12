@@ -5,15 +5,24 @@ Built with [p5.js](https://p5js.org/) library as an individual project in [Yaros
 
 **Project manager**: [Sheremetyeva Natalya Vladimirovna](https://n-sheremetyeva.jimdofree.com/), mathematics teacher of the highest category at the Yaroslavl Urban Planning College.
 
+![Screenshot of the Solar System simulation created with this simulator](pictures/SomePlanets2.jpg)
+
+*Pic. 1. The earth group planets in the Solar System simulation created with this simulator.*
+
+![Screenshot of Jupiter in the Solar System simulation created with this simulator](pictures/Jupiter.jpg)
+
+*Pic. 2. Jupiter and its moons in the Solar System simulation created with this simulator.*
+
 ## How to run
-1. Download all project's files.
+1. Download all project files.
 2. Open 'index.html' file.
+- To run the Solar System simulation, click "run the simulator" ("запустить симулятор") at the "index.html" page, then click "built-in simulations" ("готовые симуляции"), then click "Solar System" ("Солнечная Система").
 
 ## How to use
 The program has several modes.
 
 ### Adding bodies
-1. Click the "add mode" button.
+1. Click the "add mode" ("режим добавления") button.
 2. Click in the place where you want to create a body.
 3. Click in the place where the vector of the initial velocity of the body will end.
 4. Press the mode button again to exit it and run the simulation.
@@ -24,13 +33,13 @@ You can also run ready-made simulations by clicking on the "ready simulations" b
 - To zoom in or out, rotate the mouse wheel.
 
 ### Altering bodies
-To change space objects, click "selection mode" and click on a body. The object parameters will appear on the left. You can change them. Press the mode button again to exit it.
+To change space objects, click "selection mode" ("режим выбора") and click on a body. The object parameters will appear on the left. You can change them. Press the mode button again to exit it.
 
 ### Removal
-To delete all objects in the simulation, click "delete all objects".
+To delete all objects in the simulation, click "delete all objects" ("удалить все объекты").
 
 ### Video recording
-To start videotaping the simulation, click "start video recording". Press the button again to finish recording.
+To start videotaping the simulation, click "start video recording" ("начать запись видео"). Press the button again to finish recording. Watch the video. Then click three dots button on the video player and select "download the video".
 
 ## How it works
 
