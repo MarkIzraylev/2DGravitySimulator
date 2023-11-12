@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Симулятор гравитации</title>
+    <script src="p5.min.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link href="tailwind.min.css" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/48/000000/star.png" type="image/x-png">
+    
+    
+</head>
+<body>
+    <script>
+        var hexToRgb = hex =>
+  hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i
+             ,(m, r, g, b) => '#' + r + r + g + g + b + b)
+    .substring(1).match(/.{2}/g)
+    .map(x => parseInt(x, 16))
+
+        function rgbToHex(r, g, b) {
+            return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        }
+    </script>
+    <style>
+        body {
+            background-color: black;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        div {
+            margin-left: 10px
+        }
+        #videoBox {
+            display: none;
+        }
+        button {
+            background: black;
+            color: white;
+            border: 1px solid white;
+            margin: 10px;
+            padding: 0px 5px;
+        }
+        input {
+            color: black;
+            border: 1px solid black;
+        }
+        #parametersBox {
+            width: 200px;
+            position: fixed;
+            display: none;
+            color: white
+        }
+        #preparedSimulations {
+            width: 200px;
+            position: fixed;
+            display: none;
+            color: white
+        }
+    </style>
+
+    <div id="parametersBox">
+        <p>Название тела</p>
+        <input type="text" id="parametersBox-name" placeholder="Название тела" onchange="gameObjects[document.getElementById('parametersBox-index').value].name = this.value;">
+        
+        <p>Координаты X и Y</p>
+        <input type="number" id="parametersBox-posX" placeholder="X координата" onchange="gameObjects[document.getElementById('parametersBox-index').value].pos.x = Number(this.value);">
+        <input type="number" id="parametersBox-posY" placeholder="Y координата" onchange="gameObjects[document.getElementById('parametersBox-index').value].pos.y = Number(this.value);">
+        <p>Скорость по X и Y осям</p>
+        <input type="number" id="parametersBox-velX" placeholder="Скорость по X оси" onchange="gameObjects[document.getElementById('parametersBox-index').value].vel.x = Number(this.value);">
+        <input type="number" id="parametersBox-velY" placeholder="Скорость по Y оси" onchange="gameObjects[document.getElementById('parametersBox-index').value].vel.y = Number(this.value);">
+        <p>Радиус</p>
+        <input type="number" id="parametersBox-radius" placeholder="Радиус" onchange="gameObjects[document.getElementById('parametersBox-index').value].radius = Number(this.value);">
+        <p>Масса</p>
+        <input type="number" id="parametersBox-mass" placeholder="Масса" onchange="gameObjects[document.getElementById('parametersBox-index').value].mass = Number(this.value);">
+        <p>Цвет</p>
+        <input type="color" id="parametersBox-color" onchange="gameObjects[document.getElementById('parametersBox-index').value].fill = hexToRgb(this.value); trails[document.getElementById('parametersBox-index').value].stroke = hexToRgb(this.value)">
+        <p>Зафиксировать тело на месте</p>
+        <input type="checkbox" id="parametersBox-fixed" onchange="gameObjects[document.getElementById('parametersBox-index').value].fixed = this.checked">
+
+        <p>Зафиксировать камеру на этом теле</p>
+        <input type="checkbox" id="parametersBox-cameraIsFixed" onchange="if(this.checked) {indexOfObjectCameraIsFixedTo = document.getElementById('parametersBox-index').value;} else {indexOfObjectCameraIsFixedTo = false;}">
+
+
+        <input type="number" id="parametersBox-index" style="display: none">
+    </div>
+
+    <div id="preparedSimulations">
+        <p>Вы можете запустить уже готовую симуляцию</p>
+        <button onclick="addSolarSystem(); showPreparedSimulations = false; document.getElementById('preparedSimulations').style.display = 'none';">Солнечная Система</button>
+    </div>
+    
+
+    <video controls id="videoBox"></video>
+    <script src="quadTree.js"></script>
+    <script src="bignumber.js"></script>
+    
+    <script src="changePositionInANewLoop.js"></script>
+</body>
+</html>

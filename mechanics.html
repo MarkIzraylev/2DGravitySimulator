@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Механизм работы</title>
+    <link href="tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/48/000000/star.png" type="image/x-png">
+</head>
+<body class="bg-black text-white p-10 flex justify-center">
+    <div class="w-1/2">
+        <h1 class="text-5xl mb-10 mt-10">Механизм работы программы</h1>
+        <p class="text-base mb-10">На игровом поле есть некоторое количество тел, обладающих массой, векторами скорости и координатами. Задача симулятора заключается в нахождении координат тел и их скоростей в последующие моменты времени.<br><br>Эти расчёты производятся на основании закона всемирного тяготения Ньютона.<br>Каждый новый кадр программа находит силу притяжения (F) каждого тела ко всем другим телам на игровом поле.<br>Так как F = ma (где F - сила, m - масса, a - ускорение), то a = F/m. То есть для нахождения ускорения тела в конкретный момент времени нужно разделить силу (в данном случае - силу притяжения), действующую на тело, на его массу.<br>Известно, что ускорение показывает быстроту изменения скорости. Поэтому векторы скоростей тел изменяются на вектор ускорения в конкретный момент времени. Следовательно, изменение вектора скорости = вектор силы притяжения / масса тела.<br><br>Т.е. <span style="border: 1px solid white; padding: 5px;">Δ<span style="	text-decoration: overline;">V</span> = <span style="	text-decoration: overline;">F</span>/m</span>.</p>
+        <div class="w-full mb-10 flex justify-center"><img src="pictures/gravitationlaw.jpg" class="w-1/2" alt="Закон всемирного тяготения"></div>
+    </div>
+</body>
+</html>
