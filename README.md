@@ -46,7 +46,7 @@ To start videotaping the simulation, click "start video recording" ("начат�
 
 - These calculations are made on the basis of Newton's law of universal gravitation.
     1. Each new frame, the program finds the force of attraction (F) of each body to all other bodies on the playing field.
-    2. Since F = ma (where F is force, m is mass, a is acceleration), then a = F/m. That is, to find the acceleration of a body at a particular time, you need to divide the force (in this case, the force of attraction) acting on the body by its mass.
+    2. Since F = m*a (where F is force, m is mass, a is acceleration), then a = F/m. That is, to find the acceleration of a body at a particular time, you need to divide the force (in this case, the force of attraction) acting on the body by its mass.
     3. It is known that acceleration shows the rate of speed change. Therefore, the velocity vectors of bodies change to the acceleration vector at a specific time. Hence, the change in the velocity vector = the vector of gravity / body mass.
 
 - That is,
